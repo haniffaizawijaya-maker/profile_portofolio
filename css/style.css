@@ -1,0 +1,267 @@
+/* ============================================================
+   STREETWEAR / BRUTALIST COLLAGE PORTFOLIO STYLES
+   Inspired by Raw Print, Y2K Grunge, Ripped Paper, Graph Grid
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=Cabinet+Grotesk:wght@800;900&family=Space+Grotesk:wght@500;600;700&family=Reenie+Beanie&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root {
+  --bg-paper: #ecece9;
+  --grid-line: rgba(0, 0, 0, 0.07);
+  --dark-strip: #0d0d0f;
+  --accent-red: #ff1e27;
+  --accent-blue: #1e40af;
+  --accent-yellow: #facc15;
+}
+
+body {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  background-color: var(--bg-paper);
+  color: #111;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.font-display {
+  font-family: 'Cabinet Grotesk', 'Syne', sans-serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', 'Reenie Beanie', cursive;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Notebook Grid Paper Pattern */
+.bg-grid-paper {
+  background-color: #f0f0ed;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  position: relative;
+}
+
+/* Subtle Crumpled Texture Overlay */
+.bg-grid-paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.45) 0%, transparent 60%),
+              radial-gradient(circle at 80% 80%, rgba(0,0,0,0.03) 0%, transparent 50%);
+  pointer-events-none;
+  mix-blend-mode: multiply;
+}
+
+/* Ripped Paper Top Edge */
+.torn-top {
+  clip-path: polygon(
+    0% 0%, 
+    3% 20px, 7% 5px, 12% 24px, 18% 7px, 23% 22px, 
+    29% 4px, 34% 20px, 40% 6px, 46% 23px, 52% 8px, 
+    58% 22px, 63% 5px, 69% 21px, 75% 7px, 81% 23px, 
+    87% 5px, 93% 20px, 97% 6px, 100% 22px, 
+    100% 100%, 0% 100%
+  );
+}
+
+/* Ripped Paper Bottom Edge */
+.torn-bottom {
+  clip-path: polygon(
+    0% 0%, 100% 0%,
+    100% calc(100% - 18px), 
+    97% 100%, 93% calc(100% - 16px), 87% calc(100% - 4px),
+    81% calc(100% - 20px), 75% calc(100% - 6px), 69% calc(100% - 18px),
+    63% calc(100% - 4px), 58% calc(100% - 22px), 52% calc(100% - 6px),
+    46% calc(100% - 20px), 40% calc(100% - 5px), 34% calc(100% - 19px),
+    29% calc(100% - 4px), 23% calc(100% - 20px), 18% calc(100% - 6px),
+    12% calc(100% - 22px), 7% calc(100% - 5px), 3% calc(100% - 18px),
+    0% 100%
+  );
+}
+
+/* Double Torn Band (for the middle black banner) */
+.torn-band {
+  clip-path: polygon(
+    0% 18px, 
+    3% 2px, 7% 20px, 12% 4px, 18% 22px, 23% 6px, 
+    29% 22px, 34% 5px, 40% 21px, 46% 6px, 52% 23px, 
+    58% 7px, 63% 22px, 69% 5px, 75% 21px, 81% 6px, 
+    87% 22px, 93% 4px, 97% 20px, 100% 5px, 
+    100% calc(100% - 18px), 
+    97% 100%, 93% calc(100% - 16px), 87% calc(100% - 4px),
+    81% calc(100% - 20px), 75% calc(100% - 6px), 69% calc(100% - 18px),
+    63% calc(100% - 4px), 58% calc(100% - 22px), 52% calc(100% - 6px),
+    46% calc(100% - 20px), 40% calc(100% - 5px), 34% calc(100% - 19px),
+    29% calc(100% - 4px), 23% calc(100% - 20px), 18% calc(100% - 6px),
+    12% calc(100% - 22px), 7% calc(100% - 5px), 3% calc(100% - 18px),
+    0% 100%
+  );
+}
+
+/* Marquee / Infinite Ticker Animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: ticker 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Crop bounding box with transformation handles */
+.crop-frame {
+  position: relative;
+  border: 1.5px solid #ff1e27;
+}
+
+.crop-frame::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  background: white;
+  border: 1.5px solid #ff1e27;
+}
+
+.crop-frame::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 7px;
+  height: 7px;
+  background: white;
+  border: 1.5px solid #ff1e27;
+}
+
+.handle-tr {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 7px;
+  height: 7px;
+  background: white;
+  border: 1.5px solid #ff1e27;
+}
+
+.handle-bl {
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  background: white;
+  border: 1.5px solid #ff1e27;
+}
+
+/* App / Skill App Icons (Y2K Squircle Style) */
+.app-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.app-icon:hover {
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.28);
+}
+
+/* Polaroid Photo Card */
+.polaroid-card {
+  background: #ffffff;
+  padding: 9px 9px 24px 9px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  position: relative;
+}
+
+.polaroid-card:hover {
+  transform: translateY(-8px) rotate(0deg) scale(1.04) !important;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.28);
+  z-index: 30;
+}
+
+/* Red / Black Silhouette Cutout Effect for Avatar */
+.cutout-silhouette {
+  filter: drop-shadow(0 0 0 #ff1e27) 
+          drop-shadow(4px 4px 0 #ff1e27) 
+          drop-shadow(-4px -4px 0 #ff1e27) 
+          drop-shadow(4px -4px 0 #ff1e27) 
+          drop-shadow(-4px 4px 0 #ff1e27)
+          drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+}
+
+/* Washi Tape / Tape Decals */
+.washi-tape {
+  position: absolute;
+  width: 90px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  border-left: 2px dashed rgba(0,0,0,0.15);
+  border-right: 2px dashed rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  z-index: 10;
+}
+
+/* Brutalist Button */
+.btn-brutal {
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 10px 20px;
+  box-shadow: 4px 4px 0 #ff1e27;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-brutal:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #ff1e27;
+  background: #ff1e27;
+  color: #fff;
+}
+
+.btn-brutal:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #ff1e27;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #e2e2de;
+}
+::-webkit-scrollbar-thumb {
+  background: #111;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff1e27;
+}

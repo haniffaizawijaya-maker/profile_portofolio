@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HANIF FAIZA WIJAYA — PORTFOLIO 2026</title>
+  <meta name="description" content="Portfolio of Hanif Faiza Wijaya — Web Developer specializing in Laravel, Livewire, HTML, and Node.js. Streetwear & brutalist collage aesthetic.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#ecece9',
+            'paper-card': '#f7f7f5',
+            'brutal-black': '#0a0a0c',
+            'brutal-red': '#ff1e27',
+            'brutal-blue': '#2563eb',
+            'brutal-yellow': '#facc15',
+          },
+          fontFamily: {
+            display: ['"Cabinet Grotesk"', 'Syne', 'sans-serif'],
+            hand: ['"Caveat"', '"Reenie Beanie"', 'cursive'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            sans: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#ecece9] text-[#111] antialiased selection:bg-[#ff1e27] selection:text-white">
+
+  <!-- ============================================================
+       TOP FIXED MINIMAL TICKER / NAV
+       ============================================================ -->
+  <div class="fixed top-0 left-0 right-0 z-50 bg-black text-white text-[11px] font-mono tracking-widest uppercase py-1.5 px-4 flex items-center justify-between border-b-2 border-black">
+    <div class="flex items-center gap-3">
+      <span class="inline-block w-2 h-2 rounded-full bg-[#ff1e27] animate-ping"></span>
+      <span>HANIF FAIZA WIJAYA • FULLSTACK WEB DEVELOPER</span>
+    </div>
+    <div class="hidden sm:flex items-center gap-6 font-semibold">
+      <a href="#about" class="hover:text-[#ff1e27] transition-colors">HELLO</a>
+      <a href="#education" class="hover:text-[#ff1e27] transition-colors">EDUCATION</a>
+      <a href="#skills" class="hover:text-[#ff1e27] transition-colors">SKILLS</a>
+      <a href="#projects" class="hover:text-[#ff1e27] transition-colors">PROJECTS</a>
+      <a href="#simulator" class="hover:text-[#ff1e27] transition-colors">TRACKER</a>
+      <a href="#contact" class="hover:text-[#ff1e27] transition-colors">CONTACT</a>
+    </div>
+    <div class="text-[#ff1e27] font-bold">EDITION 2026</div>
+  </div>
+
+  <!-- MAIN WRAPPER WITH NOTEBOOK GRAPH GRID -->
+  <div class="min-h-screen bg-grid-paper pt-8 relative overflow-hidden">
+
+    <!-- ============================================================
+         HERO SECTION: BRUTALIST STREETWEAR HEADER
+         ============================================================ -->
+    <header class="max-w-5xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-6 text-center relative">
+      
+      <!-- Sub-headers above main title -->
+      <div class="flex items-center justify-between max-w-3xl mx-auto text-xs sm:text-sm font-extrabold uppercase tracking-widest text-black mb-1">
+        <span class="tracking-[0.25em]">WEB DEVELOPER / PROGRAMMER</span>
+        <span class="font-mono text-base tracking-wider font-bold">2026</span>
+      </div>
+
+      <!-- GIANT BOLD TITLE WITH CARTOON/MASCOT ELEMENT -->
+      <div class="relative inline-block my-2">
+        <h1 class="font-display font-[900] text-6xl sm:text-8xl md:text-9xl tracking-tighter uppercase text-black leading-none select-none flex items-center justify-center">
+          <span>PORT</span>
+          
+          <!-- Illustrated Avatar Face / Mascot in the center of "PORT - F - LIO" -->
+          <div class="relative inline-flex flex-col items-center mx-1 sm:mx-2">
+            <!-- Hand-drawn style circular avatar badge -->
+            <div class="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-4 border-black bg-white overflow-hidden shadow-[4px_4px_0_#ff1e27] transform -rotate-3 hover:rotate-3 transition-transform">
+              <img src="images/profile.jpg" alt="Hanif Avatar" class="w-full h-full object-cover object-top filter grayscale contrast-125">
+            </div>
+            <!-- Hand-drawn arrow & signature label -->
+            <div class="absolute -bottom-7 sm:-bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center text-black">
+              <span class="font-handwriting text-lg sm:text-xl font-bold -rotate-6">Hanif F.W.</span>
+            </div>
+          </div>
+
+          <span>LIO</span>
+        </h1>
+      </div>
+
+      <!-- Y2K Chrome Stars / Dings Decal -->
+      <div class="flex items-center justify-center gap-3 text-black text-2xl sm:text-3xl my-6 select-none">
+        <span class="transform rotate-12">✦</span>
+        <span class="text-xl">✦</span>
+        <span class="transform -rotate-12">✦</span>
+        <span class="text-2xl font-bold">✤</span>
+      </div>
+
+    </header>
+
+    <!-- ============================================================
+         GRID SECTION: 3-COLUMN BRUTALIST MAGAZINE LAYOUT
+         Left: Standing Cutout Crop Frame
+         Middle: HELLO + EDUCATION
+         Right: SKILLS APP SQUIRCLES + EXPERIENCE
+         ============================================================ -->
+    <section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 py-6 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+
+        <!-- COLUMN 1: PHOTO WITH CROP BOUNDING BOX (RED HANDLES) -->
+        <div class="md:col-span-4 flex justify-center">
+          <div class="relative">
+            <!-- The Red Bounding Box with Corner Transformation Squares -->
+            <div class="crop-frame p-2 bg-white/70 shadow-[6px_6px_0_rgba(0,0,0,0.15)] rounded-sm">
+              <div class="handle-tr"></div>
+              <div class="handle-bl"></div>
+
+              <!-- Main Standing / Semi-profile Photo -->
+              <div class="w-56 sm:w-64 h-80 sm:h-96 bg-slate-200 overflow-hidden relative border border-black/10">
+                <img src="images/profile.jpg" alt="Hanif Faiza Wijaya" class="w-full h-full object-cover object-top filter contrast-110 brightness-100 hover:scale-105 transition-transform duration-500">
+                
+                <!-- Streetwear Label Sticker on Photo -->
+                <div class="absolute top-3 left-3 bg-black text-white text-[9px] font-mono uppercase px-2 py-0.5 tracking-wider font-bold shadow-md">
+                  IDN // 2026
+                </div>
+
+                <div class="absolute bottom-3 right-3 bg-[#ff1e27] text-white text-[10px] font-mono uppercase px-2 py-0.5 tracking-wider font-extrabold shadow-md">
+                  DEV.01
+                </div>
+              </div>
+            </div>
+
+            <!-- Hand-written note under photo -->
+            <div class="font-handwriting text-xl text-black font-bold text-center mt-2.5 transform -rotate-2">
+              "Building solid web systems with clean logic."
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: HELLO + BIO + EDUCATION -->
+        <div class="md:col-span-5 space-y-6">
+          
+          <!-- HELLO TITLE -->
+          <div>
+            <h2 class="font-display font-[900] text-5xl sm:text-6xl text-black tracking-tighter uppercase mb-2">
+              HELLO
+            </h2>
+            <div class="font-mono text-xs uppercase tracking-wider text-[#ff1e27] font-bold mb-3">
+              Hi, I'm Hanif Faiza Wijaya.
+            </div>
+            
+            <p class="text-xs sm:text-[13px] leading-relaxed text-[#222] font-medium text-justify">
+              Membangun aplikasi web bukan sekadar hobi bagi saya, melainkan cara memecahkan masalah nyata menjadi sistem yang rapi, aman, dan efisien. Saya selalu tertarik merancang alur birokrasi & layanan publik yang rumit menjadi portal interaktif yang mudah diakses semua orang.
+            </p>
+            <p class="text-xs sm:text-[13px] leading-relaxed text-[#444] font-medium text-justify mt-2">
+              Fokus utama saya pada <strong>Laravel, Livewire, semantic HTML5, dan Node.js</strong>. Terbiasa mengelola arsitektur basis data relasional MySQL, otorisasi hak akses (RBAC), serta validasi keamanan berkas.
+            </p>
+          </div>
+
+          <!-- EDUCATION SECTION (Brutalist Typography) -->
+          <div id="education" class="pt-4 border-t-2 border-black/10">
+            <h3 class="font-display font-[900] text-3xl sm:text-4xl text-black tracking-tight uppercase mb-3">
+              EDUCATION
+            </h3>
+            
+            <div class="space-y-4">
+              <!-- Education Item 1: IDN -->
+              <div class="bg-white/80 p-3.5 border-l-4 border-black shadow-sm">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-xs sm:text-sm uppercase tracking-tight text-black">
+                    Politeknik IDN (IDN Boarding School)
+                  </h4>
+                  <span class="text-[10px] font-mono px-1.5 py-0.5 bg-[#ff1e27] text-white font-bold">AKTIF</span>
+                </div>
+                <div class="text-[11px] font-mono text-[#555] mt-0.5">
+                  Rekayasa Perangkat Lunak / Software Engineering • 2024 - Sekarang
+                </div>
+                <p class="text-[11px] text-[#333] mt-1 leading-snug">
+                  Kurikulum berbasis proyek (*Project-Based Learning*) mendalami pembuatan fullstack web app dengan Laravel, Livewire, Node.js, dan database design.
+                </p>
+              </div>
+
+              <!-- Education Item 2: Imam Bukhari Solo -->
+              <div class="bg-white/80 p-3.5 border-l-4 border-black shadow-sm">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-xs sm:text-sm uppercase tracking-tight text-black">
+                    Ponpes Imam Bukhari Solo
+                  </h4>
+                  <span class="text-[10px] font-mono px-1.5 py-0.5 bg-black text-white font-bold">6 TAHUN</span>
+                </div>
+                <div class="text-[11px] font-mono text-[#555] mt-0.5">
+                  Pendidikan Menengah Berasrama Penuh • Solo, Jawa Tengah
+                </div>
+                <p class="text-[11px] text-[#333] mt-1 leading-snug">
+                  Penempaan kedisiplinan 6 tahun, etika integritas, manajemen waktu mandiri, dan ketekunan dalam memecahkan masalah kompleks.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COLUMN 3: SKILLS APP SQUIRCLES + EXPERIENCE -->
+        <div class="md:col-span-3 space-y-6">
+          
+          <!-- SKILLS SQUIRCLE ICONS (Like Ps, Ai, Ae in reference video) -->
+          <div id="skills">
+            <h3 class="font-display font-[900] text-3xl sm:text-4xl text-black tracking-tight uppercase mb-4">
+              SKILLS
+            </h3>
+
+            <div class="grid grid-cols-2 gap-3 max-w-[190px]">
+              
+              <!-- 1. Laravel Icon -->
+              <div class="app-icon bg-[#ff2d20] text-white" title="Laravel Framework">
+                <span class="font-display font-[900] text-xl leading-none">Lv</span>
+                <span class="text-[9px] font-mono uppercase tracking-wider font-bold mt-1 opacity-90">Laravel</span>
+              </div>
+
+              <!-- 2. Livewire Icon -->
+              <div class="app-icon bg-[#fb70a9] text-white" title="Laravel Livewire">
+                <span class="font-display font-[900] text-xl leading-none">Lw</span>
+                <span class="text-[9px] font-mono uppercase tracking-wider font-bold mt-1 opacity-90">Livewire</span>
+              </div>
+
+              <!-- 3. HTML5 Icon -->
+              <div class="app-icon bg-[#e44d26] text-white" title="Semantic HTML5">
+                <span class="font-display font-[900] text-xl leading-none">Ht</span>
+                <span class="text-[9px] font-mono uppercase tracking-wider font-bold mt-1 opacity-90">HTML5</span>
+              </div>
+
+              <!-- 4. Node.js Icon -->
+              <div class="app-icon bg-[#339933] text-white" title="Node.js Runtime">
+                <span class="font-display font-[900] text-xl leading-none">No</span>
+                <span class="text-[9px] font-mono uppercase tracking-wider font-bold mt-1 opacity-90">NodeJS</span>
+              </div>
+
+              <!-- 5. MySQL Icon -->
+              <div class="app-icon bg-[#00758f] text-white" title="MySQL Database">
+                <span class="font-display font-[900] text-xl leading-none">My</span>
+                <span class="text-[9px] font-mono uppercase tracking-wider font-bold mt-1 opacity-90">MySQL</span>
+              </div>
+
+              <!-- 6. Tailwind Icon -->
+              <div class="app-icon bg-[#06b6d4] text-white" title="Tailwind CSS">
+                <span class="font-display font-[900] text-xl leading-none">Tw</span>
+                <span class="text-[9px] font-mono uppercase tracking-wider font-bold mt-1 opacity-90">Tailwind</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- EXPERIENCE SECTION -->
+          <div class="pt-3 border-t-2 border-black/10">
+            <h3 class="font-display font-[900] text-2xl sm:text-3xl text-black tracking-tight uppercase mb-3">
+              EXPERIENCE
+            </h3>
+
+            <div class="space-y-3 font-sans text-xs">
+              <div>
+                <div class="font-mono text-[11px] font-bold text-[#ff1e27]">2024 - PRESENT</div>
+                <div class="font-extrabold uppercase text-black text-xs">Junior Fullstack Web Developer</div>
+                <div class="text-[11px] text-[#666] font-medium">Independent & Academic Projects</div>
+              </div>
+
+              <div>
+                <div class="font-mono text-[11px] font-bold text-black">PROJECTS</div>
+                <div class="font-extrabold uppercase text-black text-xs">E-Report • Jarvis Asisten • Hermes Agent</div>
+                <div class="text-[11px] text-[#666] font-medium">Civic Tech, AI Voice NLP, & Autonomous Bot</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MIDDLE SIGNATURE PIECE: RIPPED PAPER CRUMPLED BANNER
+         WITH GIANT MARQUEE TYPOGRAPHY & AVATAR CUTOUT WITH RED GLOW
+         ============================================================ -->
+    <div class="relative my-12 z-20">
+      
+      <!-- Top torn paper edge container -->
+      <div class="bg-[#0d0d0f] text-white pt-12 pb-16 torn-band relative overflow-hidden shadow-2xl">
+        
+        <!-- Big Ripped Text Background Marquee -->
+        <div class="absolute inset-0 flex items-center opacity-25 pointer-events-none select-none">
+          <div class="animate-marquee">
+            <span class="font-display font-[900] text-7xl sm:text-9xl text-white tracking-widest uppercase mr-8 whitespace-nowrap">
+              HANIF FAIZA WIJAYA • LARAVEL DEVELOPER • LIVEWIRE • NODE.JS • FULLSTACK • 
+            </span>
+            <span class="font-display font-[900] text-7xl sm:text-9xl text-white tracking-widest uppercase mr-8 whitespace-nowrap">
+              HANIF FAIZA WIJAYA • LARAVEL DEVELOPER • LIVEWIRE • NODE.JS • FULLSTACK • 
+            </span>
+          </div>
+        </div>
+
+        <!-- Centered Profile Cutout with Glowing Red Silhouette -->
+        <div class="relative max-w-5xl mx-auto px-4 flex flex-col items-center justify-center text-center">
+          
+          <div class="relative -mt-6 sm:-mt-10 mb-4 group cursor-pointer">
+            <!-- Red Neon Silhouette Backing -->
+            <div class="w-48 sm:w-60 md:w-72 h-56 sm:h-72 md:h-80 rounded-2xl overflow-hidden p-1 bg-gradient-to-tr from-[#ff1e27] via-rose-500 to-[#ff1e27] shadow-[0_0_40px_rgba(255,30,39,0.55)] transform group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-[14px] overflow-hidden bg-black relative">
+                <img src="images/profile.jpg" alt="Hanif Cutout" class="w-full h-full object-cover object-top filter contrast-125 brightness-95">
+              </div>
+            </div>
+
+            <!-- Red Glow Badge on Image -->
+            <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#ff1e27] text-white font-mono text-[11px] font-extrabold uppercase px-4 py-1 tracking-widest shadow-lg border-2 border-white">
+              HANIF FAIZA WIJAYA
+            </div>
+          </div>
+
+          <!-- Bottom Banner Text -->
+          <div class="mt-4 flex flex-wrap items-center justify-center gap-3 font-mono text-xs text-slate-300">
+            <span class="px-2 py-0.5 border border-white/20 bg-white/5">POLITEKNIK IDN</span>
+            <span>✦</span>
+            <span class="px-2 py-0.5 border border-white/20 bg-white/5">PONPES IMAM BUKHARI</span>
+            <span>✦</span>
+            <span class="px-2 py-0.5 border border-[#ff1e27] text-[#ff1e27] bg-red-950/40">AVAILABLE FOR HIRE</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ============================================================
+         FEATURED PROJECTS SECTION: BRUTALIST COLLAGE CARDS
+         Header: "THE STU" / "PROJECTS"
+         Polaroid photo cards tilted with pins & tape
+         ============================================================ -->
+    <section id="projects" class="max-w-5xl mx-auto px-4 sm:px-6 py-10 relative z-10">
+      
+      <!-- Section Title like "THE STU" in video -->
+      <div class="text-center mb-10">
+        <h2 class="font-display font-[900] text-4xl sm:text-6xl text-black tracking-tighter uppercase inline-block relative">
+          <span>SELECTED PROJECTS</span>
+          <span class="block font-handwriting text-xl text-[#ff1e27] font-bold normal-case mt-1">
+            "Sistem web nyata yang telah saya buat & kembangkan"
+          </span>
+        </h2>
+      </div>
+
+      <!-- PROJECTS SHOWCASE GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-14">
+
+        <!-- 1. E-REPORT (FLAGSHIP PROJECT) -->
+        <div class="polaroid-card transform md:-rotate-2 border-2 border-black">
+          <!-- Tape effect at top -->
+          <div class="washi-tape -top-3 left-1/2 -translate-x-1/2 transform rotate-1"></div>
+
+          <!-- Project Thumbnail Preview -->
+          <div class="aspect-[16/10] bg-black text-white p-4 relative overflow-hidden flex flex-col justify-between border border-black">
+            <div class="flex items-center justify-between z-10">
+              <span class="text-[10px] font-mono px-2 py-0.5 bg-[#ff1e27] text-white font-bold uppercase tracking-wider">
+                FLAGSHIP 01
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">CIVIC TECH</span>
+            </div>
+
+            <!-- Mini Wireframe illustration -->
+            <div class="my-auto text-left z-10">
+              <div class="font-display font-extrabold text-xl text-white tracking-tight">E-REPORT</div>
+              <div class="text-xs text-red-400 font-mono">Layanan Pengaduan Masyarakat</div>
+            </div>
+
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 z-10 pt-2 border-t border-white/20">
+              <span>Laravel 11 • Livewire</span>
+              <span class="text-emerald-400 font-bold">● COMPLETE</span>
+            </div>
+
+            <!-- Background subtle pattern -->
+            <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-[#ff1e27]/20 rounded-full blur-xl pointer-events-none"></div>
+          </div>
+
+          <!-- Polaroid Content Note -->
+          <div class="mt-4 text-left">
+            <h3 class="font-display font-bold text-base text-black uppercase tracking-tight">
+              E-Report Pengaduan
+            </h3>
+            <p class="text-xs text-[#333] font-medium mt-1 leading-snug">
+              Sistem pengaduan warga dengan nomor tiket otomatis, pelacakan status bertahap, 3-tier RBAC (Masyarakat, Petugas, Admin), dan validasi lampiran foto berkas.
+            </p>
+
+            <div class="flex flex-wrap gap-1 mt-3 text-[10px] font-mono font-bold">
+              <span class="bg-black text-white px-2 py-0.5">LARAVEL</span>
+              <span class="bg-[#ff1e27] text-white px-2 py-0.5">LIVEWIRE</span>
+              <span class="bg-slate-200 text-black px-2 py-0.5">MYSQL</span>
+              <span class="bg-slate-200 text-black px-2 py-0.5">HTML5</span>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-4 pt-3 border-t border-black/10 flex items-center justify-between gap-2">
+              <button onclick="openEreportModal()" class="btn-brutal text-xs py-1.5 px-3 flex-1 justify-center">
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                <span>Arsitektur</span>
+              </button>
+              <a href="#simulator" class="p-2 border-2 border-black bg-white hover:bg-black hover:text-white transition-colors" title="Coba Pelacakan Tiket">
+                <i data-lucide="play" class="w-4 h-4"></i>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-2 border-2 border-black bg-white hover:bg-black hover:text-white transition-colors" title="Lihat Repository GitHub">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. JARVIS ASISTEN (AI ASSISTANT SYSTEM) -->
+        <div class="polaroid-card transform md:rotate-1 border-2 border-black">
+          <div class="washi-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-2"></div>
+
+          <div class="aspect-[16/10] bg-[#0c1222] text-white p-4 relative overflow-hidden flex flex-col justify-between border border-black">
+            <div class="flex items-center justify-between z-10">
+              <span class="text-[10px] font-mono px-2 py-0.5 bg-[#00f2fe] text-black font-extrabold uppercase tracking-wider">
+                PROJECT 02
+              </span>
+              <span class="text-[10px] font-mono text-cyan-300 font-bold">AI ASSISTANT</span>
+            </div>
+
+            <div class="my-auto text-left z-10">
+              <div class="font-display font-extrabold text-xl text-white tracking-tight flex items-center gap-2">
+                <span>JARVIS ASISTEN</span>
+                <span class="inline-block w-2 h-2 rounded-full bg-[#00f2fe] animate-ping"></span>
+              </div>
+              <div class="text-xs text-cyan-400 font-mono">Personal AI Voice & Task Automation</div>
+            </div>
+
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-300 z-10 pt-2 border-t border-white/20">
+              <span>Node.js • LLM API • Web Speech</span>
+              <span class="text-[#00f2fe] font-bold">● ACTIVE</span>
+            </div>
+
+            <!-- Subtle radial glow background -->
+            <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-cyan-500/25 rounded-full blur-2xl pointer-events-none"></div>
+          </div>
+
+          <div class="mt-4 text-left">
+            <h3 class="font-display font-bold text-base text-black uppercase tracking-tight flex items-center justify-between">
+              <span>Jarvis Asisten</span>
+              <span class="text-[10px] font-mono bg-cyan-100 text-cyan-800 px-1.5 py-0.5 border border-cyan-400 font-bold">SMART ASSISTANT</span>
+            </h3>
+            <p class="text-xs text-[#333] font-medium mt-1 leading-snug">
+              Sistem asisten virtual cerdas berbasis AI untuk automasi tugas harian, pengenalan perintah suara/teks, pemrosesan bahasa alami (NLP), dan integrasi API cepat.
+            </p>
+
+            <div class="flex flex-wrap gap-1 mt-3 text-[10px] font-mono font-bold">
+              <span class="bg-black text-white px-2 py-0.5">NODE.JS</span>
+              <span class="bg-[#007acc] text-white px-2 py-0.5">AI API</span>
+              <span class="bg-[#00f2fe] text-black px-2 py-0.5">VOICE NLP</span>
+              <span class="bg-slate-200 text-black px-2 py-0.5">JAVASCRIPT</span>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-black/10 flex items-center justify-between gap-2">
+              <button onclick="copyToClipboard('Jarvis Asisten - Personal AI Assistant dengan automasi perintah dan NLP', 'Ringkasan Jarvis')" class="btn-brutal text-xs py-1.5 px-3 flex-1 justify-center bg-cyan-900 hover:bg-[#00f2fe] hover:text-black">
+                <i data-lucide="bot" class="w-3.5 h-3.5"></i>
+                <span>Info Jarvis</span>
+              </button>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-2 border-2 border-black bg-white hover:bg-black hover:text-white transition-colors" title="Lihat Repository GitHub">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. HERMES AGENT (AUTONOMOUS WORKFLOW AGENT) -->
+        <div class="polaroid-card transform md:-rotate-1 border-2 border-black">
+          <div class="washi-tape -top-3 left-1/2 -translate-x-1/2 transform rotate-2"></div>
+
+          <div class="aspect-[16/10] bg-[#160b24] text-white p-4 relative overflow-hidden flex flex-col justify-between border border-black">
+            <div class="flex items-center justify-between z-10">
+              <span class="text-[10px] font-mono px-2 py-0.5 bg-[#a855f7] text-white font-extrabold uppercase tracking-wider">
+                PROJECT 03
+              </span>
+              <span class="text-[10px] font-mono text-purple-300 font-bold">AUTONOMOUS AGENT</span>
+            </div>
+
+            <div class="my-auto text-left z-10">
+              <div class="font-display font-extrabold text-xl text-white tracking-tight flex items-center gap-2">
+                <span>HERMES AGENT</span>
+                <span class="inline-block w-2 h-2 rounded-full bg-[#a855f7] animate-ping"></span>
+              </div>
+              <div class="text-xs text-purple-400 font-mono">Workflow Automation & Messenger Agent</div>
+            </div>
+
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-300 z-10 pt-2 border-t border-white/20">
+              <span>Node.js • Laravel Webhook • AI Bot</span>
+              <span class="text-[#c084fc] font-bold">● DEPLOYED</span>
+            </div>
+
+            <!-- Subtle radial glow background -->
+            <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-purple-500/25 rounded-full blur-2xl pointer-events-none"></div>
+          </div>
+
+          <div class="mt-4 text-left">
+            <h3 class="font-display font-bold text-base text-black uppercase tracking-tight flex items-center justify-between">
+              <span>Hermes Agent</span>
+              <span class="text-[10px] font-mono bg-purple-100 text-purple-800 px-1.5 py-0.5 border border-purple-400 font-bold">AGENTIC AI</span>
+            </h3>
+            <p class="text-xs text-[#333] font-medium mt-1 leading-snug">
+              Agen cerdas pengirim pesan & orkestrasi alur kerja otomatis (webhook bot). Mampu memilah notifikasi penting, merespons pesan secara adaptif, dan mengeksekusi integrasi data.
+            </p>
+
+            <div class="flex flex-wrap gap-1 mt-3 text-[10px] font-mono font-bold">
+              <span class="bg-black text-white px-2 py-0.5">LARAVEL</span>
+              <span class="bg-[#a855f7] text-white px-2 py-0.5">AGENT BOT</span>
+              <span class="bg-[#ff1e27] text-white px-2 py-0.5">WEBHOOK</span>
+              <span class="bg-slate-200 text-black px-2 py-0.5">AUTOMATION</span>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-black/10 flex items-center justify-between gap-2">
+              <button onclick="copyToClipboard('Hermes Agent - Autonomous Messenger & Workflow Automation Agent', 'Ringkasan Hermes')" class="btn-brutal text-xs py-1.5 px-3 flex-1 justify-center bg-purple-900 hover:bg-[#a855f7] hover:text-white">
+                <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+                <span>Info Hermes</span>
+              </button>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-2 border-2 border-black bg-white hover:bg-black hover:text-white transition-colors" title="Lihat Repository GitHub">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         INTERACTIVE TICKET SIMULATOR WIDGET (BRUTALIST VOUCHER/CARD)
+         ============================================================ -->
+    <section id="simulator" class="max-w-3xl mx-auto px-4 sm:px-6 py-8 relative z-10">
+      <div class="bg-white border-2 border-black p-6 sm:p-8 shadow-[8px_8px_0_#000] relative">
+        
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b-2 border-black pb-4 mb-6">
+          <div>
+            <div class="text-[10px] font-mono uppercase tracking-widest text-[#ff1e27] font-bold">LIVE INTERACTIVE TEST</div>
+            <h3 class="font-display font-black text-2xl sm:text-3xl uppercase text-black">
+              E-REPORT TICKET TRACKER
+            </h3>
+          </div>
+          <div class="w-10 h-10 border-2 border-black bg-[#ff1e27] text-white flex items-center justify-center font-bold">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </div>
+        </div>
+
+        <p class="text-xs text-[#444] mb-4 font-medium">
+          Uji coba langsung bagaimana sistem E-Report mencari resi tiket dan menyajikan respons resmi petugas lapangan:
+        </p>
+
+        <!-- Sample ticket pills -->
+        <div class="flex flex-wrap items-center gap-2 mb-4 text-xs font-mono">
+          <span class="text-black font-bold">Contoh Tiket:</span>
+          <button class="sample-ticket-btn px-2.5 py-1 border border-black bg-[#f0f0ed] hover:bg-black hover:text-white transition-colors" data-id="PM-2024-001">#PM-2024-001 (Selesai)</button>
+          <button class="sample-ticket-btn px-2.5 py-1 border border-black bg-[#f0f0ed] hover:bg-black hover:text-white transition-colors" data-id="PM-2024-002">#PM-2024-002 (Proses)</button>
+          <button class="sample-ticket-btn px-2.5 py-1 border border-black bg-[#f0f0ed] hover:bg-black hover:text-white transition-colors" data-id="PM-2024-003">#PM-2024-003 (Pending)</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="flex gap-2 mb-6">
+          <input id="sim-ticket-input" type="text" value="PM-2024-001" placeholder="Masukkan nomor tiket..." class="flex-1 px-4 py-2.5 border-2 border-black bg-[#fbfbf9] text-black font-mono text-xs font-bold focus:outline-none focus:bg-white focus:border-[#ff1e27]">
+          <button id="sim-check-btn" class="btn-brutal text-xs py-2.5 px-6">
+            <span>LACAK TIKET</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Result Box -->
+        <div id="sim-result-card" class="border-2 border-black bg-[#f9f9f7] p-4 text-xs">
+          <div class="flex items-start justify-between gap-3 pb-3 border-b border-black/10 mb-3">
+            <div>
+              <span id="sim-category" class="font-mono text-[10px] text-[#ff1e27] font-bold uppercase">INFRASTRUKTUR & TATA KOTA</span>
+              <h4 id="sim-title" class="font-display font-extrabold text-sm text-black uppercase">Kerusakan Lampu Penerangan Jalan Umum (PJU)</h4>
+            </div>
+            <span id="sim-status-badge" class="px-2.5 py-1 border-2 border-black bg-[#facc15] text-black font-mono font-bold text-[10px] uppercase">Selesai</span>
+          </div>
+
+          <div class="space-y-3">
+            <div>
+              <div class="text-[10px] font-mono text-[#777] uppercase">Aspirasi Warga:</div>
+              <p id="sim-desc" class="italic text-[#222] font-serif text-xs mt-0.5">
+                "Lampu jalan mati total di ruas Jalan Merdeka RT 04 RW 02 sejak 3 hari lalu, membahayakan pengendara malam."
+              </p>
+            </div>
+
+            <div class="p-3 bg-white border border-black/15">
+              <div class="flex items-center justify-between text-[10px] font-mono text-black font-bold mb-1">
+                <span class="flex items-center gap-1.5 text-[#ff1e27]">
+                  <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+                  Tanggapan Resmi Petugas Lapangan:
+                </span>
+                <span id="sim-date" class="text-slate-500">14 Okt 2024</span>
+              </div>
+              <p id="sim-response" class="text-[#333] leading-relaxed text-[11px]">
+                Laporan telah diverifikasi oleh Dinas Perhubungan. Tim teknis telah mengganti bohlam LED dan instalasi kabel pada 16 Okt 2024. Status resmi ditutup.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT & CONNECT BRUTALIST FOOTER
+         ============================================================ -->
+    <footer id="contact" class="max-w-5xl mx-auto px-4 sm:px-6 pt-12 pb-20 relative z-10 text-center">
+      
+      <div class="bg-black text-white p-8 sm:p-12 border-2 border-black shadow-[10px_10px_0_#ff1e27] relative">
+        <div class="inline-block px-3 py-1 bg-[#ff1e27] text-white font-mono text-[10px] font-extrabold uppercase tracking-widest mb-4">
+          LET'S CONNECT & COLLABORATE
+        </div>
+
+        <h2 class="font-display font-[900] text-3xl sm:text-5xl uppercase tracking-tight text-white mb-4">
+          TERTARIK DISKUSI ATAU KERJA SAMA?
+        </h2>
+
+        <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto mb-8 font-medium">
+          Saya terbuka untuk kesempatan magang, posisi Junior Web Developer, atau kolaborasi proyek Laravel & Node.js.
+        </p>
+
+        <!-- Social Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-8">
+          <button onclick="copyToClipboard('haniffaizawijaya@email.com', 'Email')" class="btn-brutal text-xs bg-white text-black hover:bg-[#ff1e27] hover:text-white border-white">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>SALIN EMAIL</span>
+          </button>
+
+          <a href="https://wa.me/6281234567890?text=Halo%20Hanif,%20saya%20tertarik%20dengan%20portofolio%20Anda." target="_blank" rel="noopener noreferrer" class="btn-brutal text-xs bg-[#25d366] text-white hover:bg-black border-[#25d366]">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WHATSAPP</span>
+          </a>
+
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-brutal text-xs bg-black text-white hover:bg-white hover:text-black border-white">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GITHUB</span>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-brutal text-xs bg-[#0077b5] text-white hover:bg-black border-[#0077b5]">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+            <span>LINKEDIN</span>
+          </a>
+        </div>
+
+        <div class="text-[11px] font-mono text-slate-400 border-t border-white/20 pt-6">
+          HANIF FAIZA WIJAYA • POLITEKNIK IDN & PONPES IMAM BUKHARI SOLO • &copy; 2026
+        </div>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- ============================================================
+       MODAL POPUP: DETAIL ARSITEKTUR E-REPORT (BRUTALIST OVERLAY)
+       ============================================================ -->
+  <div id="ereport-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="bg-white border-4 border-black w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col shadow-[12px_12px_0_#ff1e27]">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 border-b-2 border-black flex items-center justify-between bg-black text-white">
+        <div>
+          <div class="text-[10px] font-mono text-[#ff1e27] uppercase font-bold tracking-wider">CASE STUDY SPEC SHEET</div>
+          <h3 class="font-display font-[900] text-lg sm:text-xl uppercase text-white tracking-tight">
+            BEDAH SISTEM: E-REPORT PENGADUAN
+          </h3>
+        </div>
+        <button onclick="closeEreportModal()" class="w-8 h-8 border-2 border-white bg-[#ff1e27] hover:bg-white hover:text-black text-white font-bold flex items-center justify-center transition-colors">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Tabs Body -->
+      <div class="flex-1 overflow-y-auto p-5 space-y-5 bg-[#fbfbf9]">
+        
+        <!-- Tab Buttons -->
+        <div class="flex flex-wrap gap-2 border-b-2 border-black pb-3">
+          <button class="case-study-tab-btn active px-3.5 py-1.5 border-2 border-black bg-black text-white font-mono text-xs font-bold uppercase transition-all" data-tab="roles">
+            1. Hak Akses (RBAC)
+          </button>
+          <button class="case-study-tab-btn px-3.5 py-1.5 border-2 border-black bg-white text-black font-mono text-xs font-bold uppercase hover:bg-black hover:text-white transition-all" data-tab="workflow">
+            2. Siklus Alur Laporan
+          </button>
+          <button class="case-study-tab-btn px-3.5 py-1.5 border-2 border-black bg-white text-black font-mono text-xs font-bold uppercase hover:bg-black hover:text-white transition-all" data-tab="database">
+            3. Relasi Database (MySQL)
+          </button>
+          <button class="case-study-tab-btn px-3.5 py-1.5 border-2 border-black bg-white text-black font-mono text-xs font-bold uppercase hover:bg-black hover:text-white transition-all" data-tab="security">
+            4. Keamanan & Validasi
+          </button>
+        </div>
+
+        <!-- Tab 1: RBAC -->
+        <div id="tab-roles" class="case-study-panel space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 border-2 border-black bg-white shadow-[4px_4px_0_#000]">
+              <div class="text-[10px] font-mono font-bold bg-black text-white px-2 py-0.5 inline-block mb-2">TIER 01</div>
+              <h4 class="font-display font-extrabold text-sm text-black uppercase mb-1">Masyarakat</h4>
+              <ul class="text-xs text-[#333] space-y-1.5 list-disc list-inside font-medium">
+                <li>Registrasi & validasi NIK.</li>
+                <li>Buat laporan + lampiran bukti.</li>
+                <li>Pelacakan status tiket langsung.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 border-2 border-black bg-white shadow-[4px_4px_0_#ff1e27]">
+              <div class="text-[10px] font-mono font-bold bg-[#ff1e27] text-white px-2 py-0.5 inline-block mb-2">TIER 02</div>
+              <h4 class="font-display font-extrabold text-sm text-black uppercase mb-1">Petugas Lapangan</h4>
+              <ul class="text-xs text-[#333] space-y-1.5 list-disc list-inside font-medium">
+                <li>Dashboard aduan masuk.</li>
+                <li>Verifikasi berkas & lokasi.</li>
+                <li>Update progress (Pending -> Proses -> Tuntas).</li>
+              </ul>
+            </div>
+
+            <div class="p-4 border-2 border-black bg-white shadow-[4px_4px_0_#000]">
+              <div class="text-[10px] font-mono font-bold bg-black text-white px-2 py-0.5 inline-block mb-2">TIER 03</div>
+              <h4 class="font-display font-extrabold text-sm text-black uppercase mb-1">Administrator</h4>
+              <ul class="text-xs text-[#333] space-y-1.5 list-disc list-inside font-medium">
+                <li>Manajemen user & hak akses.</li>
+                <li>Master kategori aduan.</li>
+                <li>Ekspor rekapitulasi ke PDF.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Workflow -->
+        <div id="tab-workflow" class="case-study-panel space-y-4 hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="p-3 border-2 border-black bg-white">
+              <span class="text-[10px] font-mono font-bold bg-slate-200 px-1.5 py-0.5 inline-block mb-1">01. LAPOR</span>
+              <div class="font-bold text-xs uppercase">Warga Kirim Laporan</div>
+              <p class="text-[11px] text-[#444] mt-1">Sistem generate nomor tiket dan simpan foto aman.</p>
+            </div>
+            <div class="p-3 border-2 border-black bg-white">
+              <span class="text-[10px] font-mono font-bold bg-blue-200 px-1.5 py-0.5 inline-block mb-1">02. VERIFIKASI</span>
+              <div class="font-bold text-xs uppercase">Validasi Petugas</div>
+              <p class="text-[11px] text-[#444] mt-1">Pemeriksaan bukti foto dan kesesuaian kategori.</p>
+            </div>
+            <div class="p-3 border-2 border-black bg-white">
+              <span class="text-[10px] font-mono font-bold bg-yellow-200 px-1.5 py-0.5 inline-block mb-1">03. PROSES</span>
+              <div class="font-bold text-xs uppercase">Tindak Lanjut</div>
+              <p class="text-[11px] text-[#444] mt-1">Instansi lapangan mengerjakan solusi.</p>
+            </div>
+            <div class="p-3 border-2 border-black bg-white">
+              <span class="text-[10px] font-mono font-bold bg-emerald-200 px-1.5 py-0.5 inline-block mb-1">04. SELESAI</span>
+              <div class="font-bold text-xs uppercase">Kasus Ditutup</div>
+              <p class="text-[11px] text-[#444] mt-1">Foto hasil perbaikan diunggah & tiket selesai.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Database -->
+        <div id="tab-database" class="case-study-panel space-y-4 hidden font-mono text-xs">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div class="p-3 border-2 border-black bg-black text-white">
+              <div class="text-[#ff1e27] font-bold border-b border-white/20 pb-1 mb-2">users</div>
+              <div class="text-[11px] space-y-0.5">
+                <div>id (PK)</div>
+                <div>nik (unique)</div>
+                <div>name, email, password</div>
+                <div class="text-[#facc15]">role (enum)</div>
+              </div>
+            </div>
+
+            <div class="p-3 border-2 border-black bg-black text-white">
+              <div class="text-blue-400 font-bold border-b border-white/20 pb-1 mb-2">pengaduans</div>
+              <div class="text-[11px] space-y-0.5">
+                <div>id (PK)</div>
+                <div>ticket_number (unique)</div>
+                <div>user_id (FK)</div>
+                <div>isi_laporan, foto</div>
+                <div class="text-[#facc15]">status (enum)</div>
+              </div>
+            </div>
+
+            <div class="p-3 border-2 border-black bg-black text-white">
+              <div class="text-emerald-400 font-bold border-b border-white/20 pb-1 mb-2">tanggapans</div>
+              <div class="text-[11px] space-y-0.5">
+                <div>id (PK)</div>
+                <div>pengaduan_id (FK)</div>
+                <div>petugas_id (FK)</div>
+                <div>tanggapan, foto_bukti</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Security -->
+        <div id="tab-security" class="case-study-panel space-y-3 hidden text-xs">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="p-3 border-2 border-black bg-white">
+              <div class="font-bold text-black uppercase mb-1">Proteksi CSRF & XSS</div>
+              <p class="text-[11px] text-[#444]">Seluruh form POST menggunakan token @csrf dan auto-escaping data pada Blade view.</p>
+            </div>
+            <div class="p-3 border-2 border-black bg-white">
+              <div class="font-bold text-black uppercase mb-1">Validasi File Upload Ketat</div>
+              <p class="text-[11px] text-[#444]">Membatasi upload bukti hanya gambar (jpg/png max 2MB) dengan penamaan hash acak terlindungi.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-3.5 border-t-2 border-black bg-white flex items-center justify-between">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-[#ff1e27] hover:underline flex items-center gap-1.5">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>VIEW GITHUB REPO</span>
+        </a>
+        <button onclick="closeEreportModal()" class="btn-brutal text-xs py-1.5 px-4">
+          TUTUP
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 border-2 border-black bg-black text-white text-xs font-mono font-bold shadow-[6px_6px_0_#ff1e27] transition-all duration-300 transform translate-y-20 opacity-0">
+    <i data-lucide="check" class="w-4 h-4 text-[#ff1e27]"></i>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
